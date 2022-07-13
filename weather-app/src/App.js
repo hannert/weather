@@ -1,4 +1,5 @@
 import logo from './logo.svg';
+import potion from './potion.svg'
 import './App.css';
 import Weather from './Weather.tsx'
 import Data from './Data.tsx'
@@ -7,9 +8,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={potion} className="App-logo" alt="logo" />
       </header>
-      <Weather text="This is new text"/>
+
       <Data />
     </div>
   );
