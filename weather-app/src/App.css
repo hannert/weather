@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   color: white;
-  font-family: Helvetica, Arial, sans-serif
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, Arial, sans-serif
 }
 
 .App-logo {
@@ -43,7 +43,6 @@
 }
 
 .tempBody {
-  height: 200px;
-  line-height: 200px;
-  font-size: 24px;
+  font-size: 32px;
+
 }

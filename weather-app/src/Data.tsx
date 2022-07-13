@@ -40,7 +40,7 @@ export default class Data extends React.Component<MyProps, MyState>{
         console.log(" render")
         return(
             <div>
-            <div className="tempBody">{this.state.currentWeather?.main?.temp}</div>
+                <div className="tempBody">{this.state.currentWeather?.main?.temp}</div>
             </div>
         )
     }
