@@ -1,0 +1,35 @@
+.displayBody{ 
+    display: inline-block;
+    padding-left: 16rem;
+    padding-right: 16rem;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    width: 600px;
+    height: 300px;
+    background-color: rgba(234, 159, 74, 0.556);
+    background-image:linear-gradient( rgb(213, 158, 68), rgb(88, 32, 112));
+    backdrop-filter: blur(1px);
+    overflow: hidden;
+}
+
+.displayBody h2{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+.displayBody p{
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.infoGroup {
+    display:block;
+}
+
+.container {
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+}
+
+
+.title {
+    float:left;
+}

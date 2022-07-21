@@ -4,4 +4,9 @@
     left:1vw;
     width: 100px;
     text-overflow: ellipsis;
+    transition: 0.3s;
+}
+
+.BackButton:hover{
+    color:brown;
 }
