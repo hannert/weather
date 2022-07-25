@@ -5,8 +5,11 @@ import { DiGithub } from 'react-icons/di'
 export default function Back() {
     return(
         <div className={styles.BackButton}>
-            <div>chris RPE 8.5</div>
-            <DiGithub/>
+
+            <a href='https://github.com/hannert'  target="_blank" rel="noopener noreferrer">
+                <DiGithub size='50' className={styles.iconz}/>
+            </a>
+            
         </div>
     )
 }

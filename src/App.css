@@ -1,11 +1,29 @@
+.light {
+  --font-color: #282c34;
+  --font-background:  #fefdf7;
+  --content-color:  #fefdf7;
+  --content-background: #282c34;
+  --aux-color: #9359a3;
+}
+.dark {
+  --font-color: #fefdf7;
+  --font-background: #282c34;
+  --content-color: #282c34;
+  --content-background: #fefdf7;
+  --aux-color: #ca826a;
+}
+
+
+
 .App {
+  padding-top: 80px;
   text-align: center;
-  color: white;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, Arial, sans-serif;
   font-size: large;
-  background-color: #282c34;
-  display: block;
-  height: 100vh;
+  background-color: var(--font-background);
+  padding-bottom: 80px;
+  transition: 0.5s;
+
 }
 
 .App-logo {

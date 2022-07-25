@@ -1,0 +1,7 @@
+.Footer {
+
+    color: var(--font-color);
+    left: 50%;
+    font-size: small;
+    margin-top: 3rem;
+}

@@ -7,6 +7,17 @@
     transition: 0.3s;
 }
 
+.iconz {
+    color: var(--font-color);
+    transition: 0.3s;
+}
+
+.iconz:hover {
+    color: var(--aux-color);
+}
+
+
+
 .BackButton:hover{
     color:brown;
 }

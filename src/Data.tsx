@@ -2,6 +2,7 @@ import React from "react";
 import Display from "./Display.tsx";
 import styles from './Data.module.css'
 import Potion from './potion.svg'
+import Autocomplete from 'react-google-autocomplete'
 
 type MyProps = {
     title: string
@@ -16,12 +17,11 @@ type MyState = {
 
 export default class Data extends React.Component<MyProps, MyState>{
 
-
     constructor(props){
         super(props)
         this.state = {
-            latitude: '26.0998',
-            longitude: '119.2966',
+            latitude: '53.5511',
+            longitude: '9.9937',
             currentWeather: 'Empty',
         }
     }
@@ -81,7 +81,7 @@ export default class Data extends React.Component<MyProps, MyState>{
                         latitude = {this.state.latitude}
                         longitude = {this.state.longitude   }
                 />
-                <div className={styles.box}>
+                <div>
                     <div className={styles.buttonGroup}>
                         <button onClick={() => {this.updateLocation()}} className={styles.buttonA}> 
                             <div className={styles.blured}> 👋 </div>
@@ -89,10 +89,11 @@ export default class Data extends React.Component<MyProps, MyState>{
                         </button>
                         <button onClick={() => {this.randomizeLocation()}} className={styles.buttonA}>
                             <div className={styles.blured}> 🎲 </div>
-                             RANDOM! 
+                                RANDOM! 
                         </button>       
                     </div>
-                </div>
+                </div> 
+
             </div>
         )
     }

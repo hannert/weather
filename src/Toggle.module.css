@@ -1,0 +1,107 @@
+
+.Toggle{
+    color: var(--content-color);
+    background-color: var(--content-background);
+    border-radius: 50px;
+    height: 1.5rem;
+    width: 5rem;
+    transition: 0.5s;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+}
+
+.Toggle__inner {
+    position: relative;
+    left: 1.3rem;
+    top: 0.05rem;
+    background-color: var(--aux-color);
+    height: 1rem;
+    width: 1rem;
+    border-radius: 12rem;
+    display: inline-block;
+    box-shadow: 0rem 0rem 0rem 0.1rem rgb(239, 189, 49);
+}   
+
+.Toggle[theme='light'] .Toggle__inner{
+    animation: switchAnimationR2L 1s 1;
+    animation-fill-mode: forwards;
+}
+.Toggle[theme='light'] .Toggle__inner{
+    background-color: rgb(222, 176, 52);
+}
+
+.Toggle[theme='dark'] .Toggle__inner{
+    animation: switchAnimationL2R 1s 1;
+    animation-fill-mode: forwards;
+}
+.Toggle[theme='dark'] .Toggle__inner{
+    background-color: rgb(29, 45, 77);
+}
+
+@keyframes switchAnimationR2L{
+    0% { width: 1rem;}
+    40% { width: 2.3rem}
+    100% { width: 1rem; left: -1.3rem; box-shadow: 0rem 0rem 0rem 0.1rem rgb(239, 189, 49);}
+}
+
+@keyframes switchAnimationL2R{
+    0% { width: 1rem; left: -1.3rem;}
+    40% { width: 2.3rem}
+    100% { width: 1rem; left: 1.3rem; box-shadow: 0rem 0rem 0rem 0.1rem rgb(100, 100, 100);}
+}
+
+@media only screen and (max-width: 768px) {
+    .Toggle{
+        color: var(--content-color);
+        background-color: var(--content-background);
+        border-radius: 50px;
+        height: 2rem;
+        width: 3.5rem;
+        transition: 0.5s;
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+    }
+
+    .Toggle__inner {
+        position: relative;
+        left: 1rem;
+        top: 0.1rem;
+        background-color: var(--aux-color);
+        height: 1rem;
+        width: 1rem;
+        border-radius: 12rem;
+        display: inline-block;
+    }   
+    
+    .Toggle[theme='light'] .Toggle__inner{
+        animation: switchAnimationR2L 1s 1;
+        animation-fill-mode: forwards;
+    }
+    .Toggle[theme='light'] .Toggle__inner{
+        background-color: rgb(222, 176, 52);
+    }
+    
+    .Toggle[theme='dark'] .Toggle__inner{
+        animation: switchAnimationL2R 1s 1;
+        animation-fill-mode: forwards;
+    }
+    .Toggle[theme='dark'] .Toggle__inner{
+        background-color: rgb(29, 45, 77);
+    }
+    
+    @keyframes switchAnimationR2L{
+        0% { width: 1rem;}
+        40% { width: 2.1rem}
+        100% { width: 1rem; left: -0.9rem; box-shadow: 0rem 0rem 0rem 0.1rem rgb(239, 189, 49);}
+    }
+    
+    @keyframes switchAnimationL2R{
+        0% { width: 1rem; left: -0.9rem;}
+        40% { width: 2.1rem}
+        100% { width: 1rem; left: 0.9rem; box-shadow: 0rem 0rem 0rem 0.1rem rgb(100, 100, 100);}
+    }
+    
+
+}

@@ -1,11 +1,13 @@
 import React from 'react'
 import styles from './Display.module.css'
-import { WiAlien, WiFahrenheit, WiDaySnow , WiThermometer, WiDegrees} from 'react-icons/wi'
+import { WiAlien, WiFahrenheit, WiDaySnow , WiThermometer, WiDegrees, WiDayCloudy, WiNightClear, WiDaySunny} from 'react-icons/wi'
 import {FaHandLizard} from 'react-icons/fa'
 import {TbWorld, TbWorldLatitude, TbWorldLongitude} from 'react-icons/tb'
-
+import { IconNames } from './WeatherTypes.tsx'
 
 export default function Display(props) {
+    const Tag = IconNames[props.condition]
+
     return(
         <div className={styles.displayBody}>
             <div className={styles.infoGroup}>
@@ -13,12 +15,13 @@ export default function Display(props) {
                     <div>
                         <h2>Location: </h2>
                         <p>{props.location} </p>
-                        <WiAlien />
+                        📍
                     </div>
                     : 
                     <div>
                         <h2>Location: </h2>
-                        <p>Somewhere in the ocean... 🌊 </p>
+                        <p>Somewhere in the ocean...</p>
+                        🌊
                     </div>
                 }
                 <div className={styles.container}> 
@@ -28,16 +31,18 @@ export default function Display(props) {
                 {props?.condition &&
                     <div className={styles.container}>  
                         <span><FaHandLizard/> Conditions: </span> 
-                        <span>{props.condition} </span>
+                        <span>
+                            {props.condition} {}
+                        </span>
                     </div>
                 }
-                <div className={styles.container}> 
-                    <span className={styles.title}><TbWorldLatitude/> Latitude: </span>
+                <div className={styles.infoBlock}> 
+                    <span className={styles.infoBlock__title}><TbWorldLatitude/> Latitude: </span>
                     <span className={styles.content}>{Number(props?.latitude).toFixed(3)} <WiDegrees/> </span>
                 
                 </div> 
-                <div className={styles.container}> 
-                    <span className={styles.title}><TbWorldLongitude/> Longitude: </span>
+                <div className={styles.infoBlock}> 
+                    <span className={styles.infoBlock__title}><TbWorldLongitude/> Longitude: </span>
                     <span className={styles.content}>{Number(props?.longitude).toFixed(3)} <WiDegrees/> </span>
                 </div> 
             </div>
