@@ -80,6 +80,7 @@ export default class Data extends React.Component<MyProps, MyState>{
                         condition = {this.state.currentWeather?.weather?.[0].main}
                         latitude = {this.state.latitude}
                         longitude = {this.state.longitude   }
+                        deg = {this.state.currentWeather?.wind?.deg}
                 />
                 <div>
                     <div className={styles.buttonGroup}>

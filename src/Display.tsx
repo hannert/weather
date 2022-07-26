@@ -3,10 +3,11 @@ import styles from './Display.module.css'
 import { WiAlien, WiFahrenheit, WiDaySnow , WiThermometer, WiDegrees, WiDayCloudy, WiNightClear, WiDaySunny} from 'react-icons/wi'
 import {FaHandLizard} from 'react-icons/fa'
 import {TbWorld, TbWorldLatitude, TbWorldLongitude} from 'react-icons/tb'
-import { IconNames } from './WeatherTypes.tsx'
+import { IconComponents } from './WeatherTypes.tsx'
+import Compass from './Compass.tsx'
 
 export default function Display(props) {
-    const Tag = IconNames[props.condition]
+    const Tag = IconComponents[props.condition]
 
     return(
         <div className={styles.displayBody}>
@@ -32,7 +33,7 @@ export default function Display(props) {
                     <div className={styles.container}>  
                         <span><FaHandLizard/> Conditions: </span> 
                         <span>
-                            {props.condition} {}
+                            {props.condition} {Tag}
                         </span>
                     </div>
                 }
@@ -46,6 +47,12 @@ export default function Display(props) {
                     <span className={styles.content}>{Number(props?.longitude).toFixed(3)} <WiDegrees/> </span>
                 </div> 
             </div>
+            { props?.deg && 
+            <div className={styles.centered}>
+                <Compass deg={props?.deg} />
+            </div>
+            }
+            
         </div>
     )
 }   

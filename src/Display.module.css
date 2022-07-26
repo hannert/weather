@@ -24,6 +24,8 @@
 
 .infoGroup {
     display:block;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .container {
@@ -38,6 +40,12 @@
     padding-right: 1rem;
     display:flex;
     justify-content: space-between;
+}
+
+.centered {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
 }
 
 .infoBlock__title {
